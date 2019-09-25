@@ -1,5 +1,5 @@
 {% set name = "epysurv" %}
-{% set version = "0.0.3" %}
+{% set version = "0.0.4" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/jarnorfb/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 107cf79fc8edd7f4c0faa0805a13615d09950374590a78091404fe2cfdf4a962
+  sha256: 65298ff4a8518c5fcaffc4ef49d7671393075c26f1f4ab4ffc37d0dda8cafdd1
 
 build:
   number: 0
