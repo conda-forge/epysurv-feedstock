@@ -7,10 +7,10 @@ package:
 
 source:
   url: https://github.com/jarnorfb/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 65298ff4a8518c5fcaffc4ef49d7671393075c26f1f4ab4ffc37d0dda8cafdd1
+  sha256: b6999a1dc55b2016004484deb18408f5103d5ce5fe5735a3a8b8f1649201323b
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: "{{ PYTHON }} -m pip install . --ignore-installed --no-deps -vv"
 
@@ -20,7 +20,7 @@ requirements:
     - pip
   run:
     - python >=3.7
-    - rpy2
+    - rpy2 <3
     - r-base
     - r-gamlss
     - r-gridbase
