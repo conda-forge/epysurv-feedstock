@@ -1,5 +1,5 @@
 {% set name = "epysurv" %}
-{% set version = "0.0.4" %}
+{% set version = "0.0.6" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://github.com/jarnorfb/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: b6999a1dc55b2016004484deb18408f5103d5ce5fe5735a3a8b8f1649201323b
+  sha256: 31752c32e09a0668bd2b6f0cc7672c41a19c149e664da652628fa7a33d25d8cc
 
 build:
-  number: 2
+  number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . --ignore-installed --no-deps -vv"
+  script: {{ PYTHON }} -m pip install . --ignore-installed --no-deps -vv
 
 requirements:
   host:
@@ -26,7 +26,7 @@ requirements:
     - r-gridbase
     - r-mglm
     - r-msm
-    - r-surveillance 
+    - r-surveillance
     - numpy >=1.14
     - matplotlib-base
     - pandas
@@ -56,7 +56,7 @@ about:
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: 'Epidemiological surveillance in Python'
+  summary: Epidemiological surveillance in Python
 
   description: |
     epysurv provides access to epidemiological surveillance in Python by
