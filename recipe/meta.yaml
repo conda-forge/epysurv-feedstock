@@ -10,16 +10,16 @@ source:
   sha256: 31752c32e09a0668bd2b6f0cc7672c41a19c149e664da652628fa7a33d25d8cc
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . --ignore-installed --no-deps -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - rpy2 <3
     - r-base
     - r-gamlss
@@ -46,6 +46,7 @@ test:
   requires:
     - pytest
     - pytest-datadir
+    - python {{ python_min }}
   source_files:
     - tests/
   commands:
